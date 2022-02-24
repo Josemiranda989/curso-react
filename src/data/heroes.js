@@ -1,4 +1,4 @@
-export const heroes = [
+const heroes = [
   {
     id: 1,
     name: "Batman",
@@ -25,3 +25,21 @@ export const heroes = [
     owner: "Marvel",
   },
 ];
+
+// ! Metodo 1
+/* export const owners = ['Dc', 'Marver']
+export default heroes; */
+
+// ! Metodo 2
+/* const owners = ['Dc', 'Marver']
+export {
+  heroes as default,
+  owners
+} */
+
+// ! Metodo 3
+const owners = ['Dc', 'Marver']
+export {
+  heroes,
+  owners
+}
