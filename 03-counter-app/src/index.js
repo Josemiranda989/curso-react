@@ -10,4 +10,5 @@ import './index.css';
 const divRoot = document.querySelector('#root');
 
 
-ReactDOM.render(<CounterApp value= {5} /> , divRoot);
+ReactDOM.render(<PrimeraApp saludo='Hola, soy goku'/> , divRoot);
+// ReactDOM.render(<CounterApp value= { 10 } /> , divRoot);
