@@ -14,7 +14,7 @@ export const AddCategory = ({ setCategories }) => {
       e.preventDefault();
       
       if (inputValue.trim().length > 2) {
-              setCategories((cat) => [...cat, inputValue]); //agrega a la lista
+              setCategories((cat) => [inputValue, ...cat]); //agrega a la lista
     //      setCategories([...categories, 'Dragon Ball']) Metodo2
           setInputValue(''); //para que se limpie el input
       }
