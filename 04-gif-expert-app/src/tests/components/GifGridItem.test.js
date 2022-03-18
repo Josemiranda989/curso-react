@@ -1,11 +1,20 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { GifGridItem } from "../../components/GifGridItem";
+import { GifGridItem } from "../../components/GifGridItem"
 
 describe("pruebas en GifGridItem.js", () => {
-  let wrapper = shallow(<GifGridItem />);
-
+  
+  const title = "Un titulo";
+  const url = "https://localhost/algo.jpg";
+  
   test("debe de mostrar el componente correctamente", () => {
+    
+    let wrapper = shallow(<
+      GifGridItem
+      title={title}
+      image={url}
+    />);
+
     expect(wrapper).toMatchSnapshot();
   });
  
