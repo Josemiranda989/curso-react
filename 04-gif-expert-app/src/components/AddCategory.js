@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 export const AddCategory = ({ setCategories }) => {
   // export const AddCategory = ({setCategories, categories}) => { Metodo2
-  const [inputValue, setInputValue] = useState([]);
+  const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -12,7 +12,8 @@ export const AddCategory = ({ setCategories }) => {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      
+    console.log('handleSubmit', inputValue); 
+    
       if (inputValue.trim().length > 2) {
               setCategories((cat) => [inputValue, ...cat]); //agrega a la lista
     //      setCategories([...categories, 'Dragon Ball']) Metodo2
@@ -22,7 +23,12 @@ export const AddCategory = ({ setCategories }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={inputValue} onChange={handleInputChange} />
+      <p> {inputValue} </p>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+      />
     </form>
   );
 };
